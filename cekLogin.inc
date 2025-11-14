@@ -8,4 +8,4 @@ require_once "includes/navbar.php";
 		exit();
 	}
 
- ?>
+?>
