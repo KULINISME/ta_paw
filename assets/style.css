@@ -134,9 +134,7 @@ footer li {
 .login p {
   padding: 15px;
 }
-/* .login a:hover{
-	color: #1565c0;
-} */
+
 /* Register */
 
 .register {
@@ -568,4 +566,22 @@ footer li {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+/* admin dashboard */
+.dashboard_admin{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  text-align: center;
+  margin-top: 10%;
+}
+.dashboard_admin div{
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.dashboard_admin h3{
+  color: #1565c0;
 }

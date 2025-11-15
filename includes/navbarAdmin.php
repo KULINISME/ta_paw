@@ -1,7 +1,8 @@
 <div class="nav">
 	<ul>
-		<li><a href="">Siswa</a></li>
-		<li><a href="">Pendaftar</a></li>
+		<li><a href="index.php">Dashboard</a></li>
+		<li><a href="siswa_lolos.php">Siswa Diterima</a></li>
+		<li><a href="pendaftar.php">Pendaftar</a></li>
 		<li><a href="jurusan.php">Jurusan</a></li>
 	</ul>
 	<ul>
