@@ -7,6 +7,8 @@
 		</a></li>
 		<li><a href="#alur">Alur Pndaftaran Online</a></li>
 		<li><a href="#detail">Detial Pendaftaran</a></li>
+		<li><a href="#vimisi">Visi-Misi</a></li>
+		<li><a href="#pendaftaran">Pendafataran</a></li>
 	</ul>
 	<ul>
 		<li><a href="login.php"><button>Login</button></a></li>

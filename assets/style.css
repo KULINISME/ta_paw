@@ -24,24 +24,14 @@ a {
 .logo span {
   color: blue;
 }
+
 .header {
   background: #ffff;
   padding-left: 1rem;
+  /* position: fixed; */
 }
 /* navbar */
-.nav button {
-  padding: 5px 20px;
-  background-color: #bbdefb;
-  border-radius: 10px;
-  font-size: 15px;
-  border: none;
-}
-.nav button {
-  padding: 3px 10px;
-  background-color: #bbdefb;
-  border-radius: 20px;
-  font-size: 15px;
-}
+
 .nav button {
   padding: 5px 20px;
   background-color: #2196f3;
@@ -52,6 +42,7 @@ a {
 
 .nav button:hover {
   background-color: #83b3ea;
+  background-color: #bbdefb;
 }
 .nav {
   padding: 0rem 1rem;
@@ -61,8 +52,9 @@ a {
   flex-direction: row;
   justify-content: space-between;
   border-bottom: blue 1px solid;
-  /* position: fixed; */
 }
+/* position: fixed; */
+
 ul {
   list-style: none;
 }
@@ -82,6 +74,7 @@ ul {
 footer {
   background-color: #1565c0;
   padding: 30px;
+  margin-top: 5%;
 }
 .footer {
   display: flex;
@@ -153,9 +146,7 @@ footer a:href {
 .login p {
   padding: 15px;
 }
-/* .login a:hover{
-	color: #1565c0;
-} */
+
 /* Register */
 
 .register {
@@ -208,7 +199,7 @@ footer li {
 }
 
 /* header */
-/* === Dashboard container === */
+/* dashboard */
 .dashboard {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.612), rgba(0, 0, 0, 0.5)),
@@ -377,11 +368,15 @@ footer li {
 }
 
 /* Panduan PPDB */
-.bacgron_ppdb {
+.backgron_ppdb {
   background-color: #fff;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
+  padding-top: 5%;
 }
-
+.bacgron_ppdb {
+  margin-top: 5%;
+  /* padding: 20px; */
+}
 .judul_tengah {
   text-align: center;
   font-size: 2em;
@@ -414,8 +409,9 @@ footer li {
   text-align: center;
   padding: 25px 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(216, 214, 214, 0.562);
+  box-shadow: 0 4px 6px rgba(164, 164, 164, 0.773);
   min-height: 150px;
+  background-color: #ffffff2d;
 }
 .kolom_panduan_tgl {
   text-align: center;
@@ -432,6 +428,7 @@ footer li {
   margin: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .bacgron_detail h1 {
@@ -460,6 +457,36 @@ footer li {
   text-align: left;
 }
 
+/* pendafftar admin */
+.pendaftar {
+  display: flex;
+  justify-content: center;
+  padding: 2% 0%;
+}
+.pendaftar div {
+  background-color: white;
+  width: 80%;
+  padding: 1% 2%;
+  border-radius: 10px;
+}
+.pendaftar table {
+  width: 100%;
+  border-collapse: collapse;
+  /* border-radius: 10px; */
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.pendaftar th,
+.pendaftar td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.pendaftar th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
 /* Foom Pendaftaran */
 .form_pendaftaran {
   font-family: sans-serif;
@@ -576,4 +603,22 @@ footer li {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+/* admin dashboard */
+.dashboard_admin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  text-align: center;
+  margin-top: 10%;
+}
+.dashboard_admin div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.dashboard_admin h3 {
+  color: #1565c0;
 }

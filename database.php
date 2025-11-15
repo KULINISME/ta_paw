@@ -20,40 +20,35 @@ function register(array $data){
         ':EMAIL'=>$data['email']
     ]);
 }
-function login(array $data){
-    global $pdo;
-    $stmnt=$pdo->prepare("SELECT * FROM 
-    (");
-    $stmnt->execute([
-        ':user'=>$data['user'],
-        ':pass'=>$data['pass']
-    ]);
-    $hasil=$stmnt->fetch(PDO::FETCH_ASSOC);
-    if ($hasil) {
-        if ($hasil['ket']==0) {
-            return "0";
-        }elseif ($hasil['ket']==1) {
-            return "1";
-        }
-    }return FALSE;
-}
+
 function admin(){
     global $pdo;
-    $stmnt=$pdo->prepare("SELECT akun_siswa.NAMA_AKUN_SISWA FROM pendaftaran,akun_siswa,status_siswa WHERE pendaftaran.ID_AKUN_SISWA=akun_siswa.ID_AKUN_SISWA AND pendaftaran.ID_STATUS_SISWA=status_siswa.ID_STATUS_SISWA ");
+    $stmnt=$pdo->prepare("SELECT pendaftaran.ID_PENDAFTAR_SISWA,akun_siswa.NAMA_AKUN_SISWA,jurusan.NAMA_JURUSAN,status_siswa.JENIS_STATUS_SISWA ,kebutuhan_siswa.NAMA_KEBUTUHAN
+    FROM pendaftaran,akun_siswa,status_siswa,jurusan ,kebutuhan_siswa,pendaftaran_kebutuhan
+    WHERE pendaftaran.ID_AKUN_SISWA=akun_siswa.ID_AKUN_SISWA 
+    AND pendaftaran.ID_STATUS_SISWA=status_siswa.ID_STATUS_SISWA 
+    AND pendaftaran.ID_JURUSAN=jurusan.ID_JURUSAN 
+    AND pendaftaran_kebutuhan.ID_KEBUTUHAN=kebutuhan_siswa.ID_KEBUTUHAN
+    AND pendaftaran_kebutuhan.ID_PENDAFTAR_SISWA=pendaftaran.ID_PENDAFTAR_SISWA");
     $stmnt->execute();
     $daftar=$stmnt->fetchAll();
-    if (isset($daftar)) {
-        print_r($daftar);
-    }
+    return $daftar;
 }
-function status(array $data,$id){
+function lulus(){
     global $pdo;
-    $stmnt=$pdo->prepare("UPDATE pendafaran SET status= :status WHERE ID_PENDAFTARAN = :ID");
-    $stmnt->execute([
-        ':status'=>$data['status'],
-        ':ID'=>$id
-    ]);
+    $stmnt=$pdo->prepare("SELECT pendaftaran.ID_PENDAFTAR_SISWA,akun_siswa.NAMA_AKUN_SISWA,jurusan.NAMA_JURUSAN,status_siswa.JENIS_STATUS_SISWA ,kebutuhan_siswa.NAMA_KEBUTUHAN
+    FROM pendaftaran,akun_siswa,status_siswa,jurusan ,kebutuhan_siswa,pendaftaran_kebutuhan
+    WHERE pendaftaran.ID_AKUN_SISWA=akun_siswa.ID_AKUN_SISWA 
+    AND pendaftaran.ID_STATUS_SISWA=status_siswa.ID_STATUS_SISWA 
+    AND pendaftaran.ID_JURUSAN=jurusan.ID_JURUSAN 
+    AND pendaftaran_kebutuhan.ID_KEBUTUHAN=kebutuhan_siswa.ID_KEBUTUHAN
+    AND pendaftaran_kebutuhan.ID_PENDAFTAR_SISWA=pendaftaran.ID_PENDAFTAR_SISWA 
+    AND JENIS_STATUS_SISWA = 'Lolos'");
+    $stmnt->execute();
+    $daftar=$stmnt->fetchAll();
+    return $daftar;
 }
+
 // function register(array $data){
 
 //     $stmnt=$pdo

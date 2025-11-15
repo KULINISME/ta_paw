@@ -2,13 +2,16 @@
 	<h1>Sekolah Inklusi</h1>
 	<div class="isi">
 
-		<p>SMA Inklusi merupakan sekolah yang menerapkan pendidikan inklusif, di mana setiap remaja, baik peserta didik reguler maupun berkebutuhan khusus, memiliki hak yang sama untuk mendapatkan pendidikan jenjang menengah atas yang layak, bermutu, dan adaptif terhadap keberagaman.</p><br>
-		<p>Sekolah ini berkomitmen untuk menciptakan lingkungan belajar yang inklusif, aman, dan kolaboratif. Melalui pendekatan kurikulum berbasis kebutuhan individual (PPI) dan peningkatan kompetensi abad ke-21, setiap peserta didik didampingi agar mampu berkembang sesuai potensi, minat, dan persiapan mereka menuju dunia kerja atau perguruan tinggi.</p>
+
+		<p>Sekolah Inklusi merupakan sekolah yang menerapkan pendidikan inklusif, 
+			di mana setiap anak baik anak reguler maupun anak berkebutuhan khusus memiliki hak yang sama 
+			untuk mendapatkan pendidikan yang layak, bermutu, dan ramah terhadap keberagaman.</p><br>
+		<p>Sekolah ini berkomitmen untuk menciptakan lingkungan belajar yang inklusif, aman, dan menyenangkan. 
+			Melalui pendekatan pendidikan berbasis kebutuhan individual, setiap peserta didik didampingi agar mampu berkembang sesuai potensi dan kemampuannya.</p>
 	</div>
 	<button class="dasbuton"><a href="/ta_paw/siswa/pendaftaran.php">Daftar Sekarang</a></button>
 </div>
-<div class="dashboard1">
-	<div>
+<div class="dashboard1" id="vimisi">
 	<div class="visi" id="visi">
 	<h1>VISI</h1>
 	<p>"Terwujudnya Generasi Emas yang Inklusif, Berkarakter Kuat, Mandiri, dan Unggul dalam Pencapaian Akademik dan Non-Akademik di Era Global."</p>
@@ -23,9 +26,8 @@
     </ol>
 	</div>
 </div>
-
-<div class="bacgron_ppdb" id="jadwal">
-	<h1 class="judul_tengah">Jadwal Pendaftaran Online</h1>
+<div class="backgron_ppdb" id="pendaftaran">
+	<h1 class="judul_tengah">Jadwal Pendaftaran online</h1>
 	<div class="panduan_ppdb_tgl">
 		<div class="kolom_panduan_tgl">
 			<h3>Gelombang 1</h3>
@@ -37,8 +39,7 @@
 		</div>
 	</div>
 </div>
-
-<div class="bacgron_ppdb" id="alur">
+<div class="backgron_ppdb" id="alur">
 	<h1 class="judul_tengah">Alur Pendaftaran PPDB</h1>
 		<div class="panduan_ppdb">
 		<div class="kolom_panduan">
@@ -53,9 +54,9 @@
 			<h3>Melengkapi Dokumen</h3>
 			<p>Siswa yang ingin mendaftar diwajibkan untuk mengisi data diri</p>
 		</div>
-	</div>
+		</div>
 </div>
-<div class="bacgron_ppdb" id="detail">
+<div class="backgron_ppdb" id="detail">
 	<div class="bacgron_detail">
 		<h1>Detail Dokumen PPDB</h1>
 		<div class="kolom_detail">
@@ -64,10 +65,7 @@
 
 			<div class="isi_detail">Laporan Asesmen</div>
 			<div class="isi_detail">Laporan terbaru (maks. 1-2 tahun) dari Psikolog/Spesialis yang menjelaskan jenis Kebutuhan Khusus Siswa dan rekomendasi penanganan. (Wajib untuk penyusunan PPI).</div>
-			
-			<div class="isi_detail">Surat Pernyataan Kerja Sama</div>
-			<div class="isi_detail">Surat bermaterai yang menyatakan Kesanggupan Orang Tua untuk bekerja sama dengan Guru Pendamping Khusus (GPK) dan sekolah.</div>
-			
+
 			<div class="isi_detail">Kartu Keluarga (KK)</div>
 			<div class="isi_detail">Fotokopi KK yang dilegalisir, untuk verifikasi Domisili.</div>
 			

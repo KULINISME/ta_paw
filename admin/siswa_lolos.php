@@ -15,7 +15,10 @@ $daftar=admin();
                 <th>status</th>
                 <th>Aksi</th>
             </tr>
-            <?php foreach($daftar as $row): ?>
+            <?php 
+            foreach($daftar as $row): 
+            if($row["JENIS_STATUS_SISWA"]=="Lolos"):
+            ?>
             <tr>
                 <td><?=$row['NAMA_AKUN_SISWA']?></td>
                 <td><?=$row['NAMA_JURUSAN']?></td>
@@ -23,7 +26,7 @@ $daftar=admin();
                 <td><?=$row['JENIS_STATUS_SISWA']?></td>
                 <td><button name="lulus"><a href="edit_status.php?ID_PENDAFTARAN=<?=$row['ID_PENDAFTAR_SISWA']?>&kondisi=lulus">lulus</a></button><button name="gagal"><a href="edit_status.php?ID_PENDAFTARAN=<?=$row['ID_PENDAFTAR_SISWA']?>&kondisi=gagal">Tidak Lulus</a></button></td>
             </tr>
-            <?php endforeach;?>
+            <?php endif;endforeach;?>
         </table>
     </div>
 </div>
