@@ -106,7 +106,7 @@ footer a:href {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  margin: 90px;
+  margin: 50px;
   border-radius: 15px;
   margin-left: 30%;
   margin-right: 30%;
@@ -155,7 +155,7 @@ footer a:href {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  margin: 80px;
+  margin: 20px;
   border-radius: 15px;
   margin-left: 30%;
   margin-right: 30%;
@@ -192,6 +192,7 @@ footer a:href {
   font-weight: bold;
   cursor: pointer;
   margin-top: 15px;
+  color: white;
 }
 footer p,
 footer li {
@@ -353,7 +354,7 @@ footer li {
 
 .harap_login p {
   display: flex;
-  justify-content: centerx;
+  justify-content: center;
 }
 
 .harap_login a {
