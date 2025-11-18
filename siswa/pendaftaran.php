@@ -58,7 +58,7 @@ require_once "../includes/navbarSiswa.php";
         </div>
 
         <div class="form_isi">
-            <label for="jurusan">Pilihan Jurusan:</label>
+            <label for="jurusan">Pilihan Jurusan :</label>
             <select id="jurusan" name="id_jurusan">
                 <option value="">-- Pilih Jurusan --</option>
                 <option value="1">IPA (Ilmu Pengetahuan Alam)</option>
@@ -69,20 +69,14 @@ require_once "../includes/navbarSiswa.php";
         <h2>Kebutuhan Khusus</h2>
         <hr>
         <div class="form_isi">
-            <label for="kebutuhan">Pilih jika siswa memiliki kebutuhan khusus/kekurangan:</label>
-            <select id="kebutuhan" name="id_kebutuhan">
-                <option value="">-- Pilih Kebutuhan --</option>
-                <option value="1">Normal</option>
-                <option value="2">Tunanetra</option>
-                <option value="3">Tunarungu</option>
-                <option value="4">Kesulitan Belajar</option>
-            </select>
+            <label for="kebutuhan">Masukan Jika Siswa Memiliki Kebutuhan Khusus :</label>
+           <input type="text" id="id_kebutuhan" name="kebutuhan">
         </div>
         <h2>Data Dokumen</h2>
         <hr>
         
         <div class="form_isi">
-            <label for="kk">Nomor Kartu Keluarga :</label>
+            <label for="kk" >Kartu Keluarga : (Max ukuran file 5 mb jpg,png,tiff.)</label>
             <input type="file" 
                 id="pas_foto" 
                 name="foto_siswa" 
@@ -91,7 +85,7 @@ require_once "../includes/navbarSiswa.php";
         </div>
 
         <div class="form_isi">
-            <label for="akta">Nomor Akte Kelahiran :</label>
+            <label for="akta">Akte Kelahiran : (Max ukuran file 5 mb jpg,png,tiff. )</label>
             <input type="file" 
                 id="pas_foto" 
                 name="foto_siswa" 
@@ -100,7 +94,7 @@ require_once "../includes/navbarSiswa.php";
         </div>
 
         <div class="form_isi">
-            <label for="ijazah">Nomor Ijazah :</label>
+            <label for="ijazah">Ijazah / SKL (Surat keterangan Lulus) : (Max ukuran file 5 mb jpg,png,tiff.)</label>
             <input type="file" 
                 id="pas_foto" 
                 name="foto_siswa" 
@@ -109,7 +103,7 @@ require_once "../includes/navbarSiswa.php";
         </div>
         
         <div class="form_isi">
-            <label for="pas_foto">Foto Pas Siswa (Upload) :</label>
+            <label for="pas_foto">Foto Pas Siswa (Upload) : (Max ukuran file 5 mb jpg,png,tiff.)</label>
             <input type="file" 
                 id="pas_foto" 
                 name="foto_siswa" 
