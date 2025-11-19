@@ -1,5 +1,10 @@
 <?php
-require_once '../cekLogin.inc';
+// require_once '../cekLogin.inc';
+session_start();
+if(isset($_SESSION['isAdmin']) || $_SESSION['isAdmin']!=true){
+    require_once '../cekLogin.inc';
+    exit();
+}
 require_once '../includes/header.php';
 require_once '../includes/navbarAdmin.php';
 require_once '../database.php';
