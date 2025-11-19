@@ -2,6 +2,27 @@
 session_start();
 require_once 'validasi.php';
 require_once 'database.php';
+<<<<<<< HEAD
+require_once 'includes/header.php';
+require_once 'includes/navbar.php';
+if($_SERVER['REQUEST_METHOD']=="POST"){
+    $data=login($_POST['user'],$_POST['pass']);
+    $_SESSION['login']=true;
+    $_SESSION['ID_USER']=$data['ID'];
+    if($data['ket']==0){
+        $_SESSION['isAdmin']=true;
+        header("Location:admin/");
+        exit();
+    }elseif($data['ket']==1){
+        $_SESSION['isSiswa']=true;
+        header("Location:siswa/");
+        exit();
+    }else{
+        echo "<script>alert('Username atau Password Salah');</script>";
+        exit();
+    }
+}
+=======
  // Wadah untuk menampung error
 $pesan_sukses = ""; // Pesan jika berhasil
 
@@ -70,6 +91,7 @@ if (isset($_POST['submit'])) {
  require_once 'includes/header.php';
  require_once 'includes/navbar.php';
 
+>>>>>>> 8300d9a41ec4b7d0d2e6ca31ef0679f00849cb87
 ?>
 
 

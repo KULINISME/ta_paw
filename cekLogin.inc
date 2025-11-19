@@ -1,7 +1,4 @@
 <?php 
-	session_start();
-?>
-<?php if(!isset($_SESSION['isUser'])): 
 	require_once '../includes/header.php';
 	?>
 	<div class="harap_login">
@@ -19,5 +16,4 @@
 
 <?php 
 exit();
-endif;
  ?>

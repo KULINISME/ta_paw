@@ -121,6 +121,22 @@ function lastInsertId(){
     $id=$stmnt->fetch();
     return $id;
 }
+function login($user,$pass){
+    global $pdo;
+    $stmnt=$pdo->prepare
+    ("SELECT * 
+    FROM (SELECT ID_ADMIN AS ID,NAMA_ADMIN AS NAMA,PASSWORD_ADMIN AS PASS,0 AS ket FROM admin
+    UNION
+    SELECT ID_AKUN_SISWA AS ID,NAMA_AKUN_SISWA AS NAMA,PASSWORD_AKUN_SISWA AS PASS,1 AS ket FROM akun_siswa) AS users
+    WHERE NAMA=:user AND PASS=:pass");
+    $stmnt->execute([
+        ':user'=>$user,
+        ':pass'=>md5($pass)
+    ]);
+    $_SESSION['login']=true;
+    $data=$stmnt->fetch();
+    return $data;
+}
 // function register(array $data){
 
 //     $stmnt=$pdo

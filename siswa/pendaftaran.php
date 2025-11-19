@@ -1,7 +1,10 @@
 <?php 
-// session_start();
+session_start();
+if( $_SESSION['login']!=true){
+    require_once '../cekLogin.inc';;
+}
 require_once "../database.php";
-require_once "../cekLogin.inc";
+// require_once "../cekLogin.inc";
 require_once "../includes/header.php";
 require_once "../includes/navbarSiswa.php";
 require_once '../validasi.php';
@@ -62,6 +65,9 @@ $kebutuhan=kebutuhan();
         
         <h2>Data Pribadi Siswa</h2>
         <hr>
+        <div>
+            <input type="hidden" value="<?= $_SESSION['ID_USER'] ?>" name="id_akun">
+        </div>
 
         <div class="form_isi">
             <label for="nisn">NISN :</label>

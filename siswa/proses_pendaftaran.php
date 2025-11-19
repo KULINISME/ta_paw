@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     require_once '../database.php';
 $lastIdPendaftar=lastInsertId();
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -23,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $foto=$_FILES['foto'];
     $name_foto=$foto['name'];
     $tmp_foto=$foto['tmp_name'];
-    $tujuan_foto="../foto_pas".$name_foto;
+    $tujuan_foto="../foto_pas/".$name_foto;
     move_uploaded_file($tmp_foto,$tujuan_foto);
 
     $stmnt=$pdo->prepare
@@ -34,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $stmnt->execute([
         ':ID_STATUS_SISWA'=>1,
         ':ID_JURUSAN'=>$_POST['id_jurusan'],
-        ':ID_AKUN_SISWA'=>5,
+        ':ID_AKUN_SISWA'=>intval( $_POST['id_akun']),
         ':KARTU_KELUARGA'=>$name_kk,
         ':AKTA_KELAHIRAN'=>$name_akta,
         ':IJAZAH'=>$name_ijazah,
