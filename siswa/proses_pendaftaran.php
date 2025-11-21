@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $stmnt->execute([
         ':ID_STATUS_SISWA'=>1,
         ':ID_JURUSAN'=>$_POST['id_jurusan'],
-        ':ID_AKUN_SISWA'=>intval( $_POST['id_akun']),
+        ':ID_AKUN_SISWA'=> $_POST['id_akun'],
         ':KARTU_KELUARGA'=>$name_kk,
         ':AKTA_KELAHIRAN'=>$name_akta,
         ':IJAZAH'=>$name_ijazah,
@@ -52,6 +52,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         ':HUBUNGAN'=>$_POST['hubungan'],
         ':PEKERJAAN_WALI'=>$_POST['pekerjaan_wali'],
         ':SLIP_GAJI'=>$_POST['slip_gaji']
+
     ]);
     $stmnt2=$pdo->prepare
     ("INSERT INTO pendaftaran_kebutuhan (ID_PENDAFTAR_SISWA,ID_KEBUTUHAN) 

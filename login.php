@@ -2,7 +2,6 @@
 session_start();
 require_once 'validasi.php';
 require_once 'database.php';
-<<<<<<< HEAD
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
 if($_SERVER['REQUEST_METHOD']=="POST"){
@@ -22,9 +21,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         exit();
     }
 }
-=======
- // Wadah untuk menampung error
-$pesan_sukses = ""; // Pesan jika berhasil
+
+$pesan_sukses = ""; 
 
 $nama = '';
 $password = '';
@@ -91,7 +89,6 @@ if (isset($_POST['submit'])) {
  require_once 'includes/header.php';
  require_once 'includes/navbar.php';
 
->>>>>>> 8300d9a41ec4b7d0d2e6ca31ef0679f00849cb87
 ?>
 
 
