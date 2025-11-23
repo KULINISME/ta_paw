@@ -126,8 +126,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $jurusan=jurusan();
 $kebutuhan=kebutuhan();
-
  ?>
+
+<!-- form pendaftaran siswa  -->
 <div class="form_pendaftaran">
     <h1>Form PPDB Sekolah Inklusi</h1>
     <form method="POST" enctype="multipart/form-data" class="isi_pendaftaran">
