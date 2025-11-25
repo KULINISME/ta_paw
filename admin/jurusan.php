@@ -5,6 +5,7 @@
     $jurusan=jurusan();
 ?>
 <div class="jurusan">
+    <div>
     <h1>Daftar Jurusan</h1>
     <table>
         <tr>
@@ -34,4 +35,5 @@
         <?php endforeach; ?>
     </table>
     <a href="tambah_jurusan.php"><button>Tambah Jurusan</button></a>
+    </div>
 </div>

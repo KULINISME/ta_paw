@@ -22,23 +22,17 @@ require_once '../includes/navbarAdmin.php';
 <div class="edit_kouta">
     <div>
         <form method="POST">
-        <h2>Edit Kuota</h2>
-        <table>
-            <tr>
-                <td>
-                    <label for="">Kuota :</label>
-                    <input type="text" name="KUOTA_JURUSAN" value="<?= htmlspecialchars($kuota ?? '') ?>">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="submit">Edit</button>
-                </td>
-                <td>
-                    <a href="jurusan.php">kembali</a>
-                </td>
-            </tr>
-        </table>
+            <h2>Edit Kuota</h2>
+            
+            <div class="form-group">
+                <label for="kuota_jurusan">Kuota :</label>
+                <input type="text" id="kuota_jurusan" name="KUOTA_JURUSAN" value="<?= htmlspecialchars($kuota ?? '') ?>">
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Edit</button>
+                <a href="jurusan.php" class="btn-back">Kembali</a>
+            </div>
         </form>
-     </div>
+    </div>
 </div>
