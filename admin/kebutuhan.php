@@ -5,7 +5,8 @@
     require_once '../includes/navbarAdmin.php';
     $kebutuhan=kebutuhan();
 ?>
-<div class="jurusan">
+<div class="kebutuhan">
+    <div>
     <h1>Daftar Kebutuhan</h1>
     <table>
         <tr>
@@ -25,5 +26,10 @@
         </tr>
         <?php endforeach; ?>
     </table>
+<<<<<<< HEAD
+    <a href="tambah_kebutuhan.php"><button>Tambah Kebutuhan</button></a>
+    </div>
+=======
     <a href="tambah_kebutuhan.php">Tambah Kebutuhan</a>
+>>>>>>> 7e3e456c78ea83d38f1d37f80c88a4259aa52265
 </div>
