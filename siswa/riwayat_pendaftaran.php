@@ -10,10 +10,8 @@ $idSiswa = $_SESSION['ID_USER'];
 require_once "../database.php";
 ?>
 
-<div class="top-sticky">
-    <?php require_once "../includes/header.php"; ?>
-    <?php require_once "../includes/navbarSiswa.php"; ?>
-</div>
+<?php require_once "../includes/header.php"; ?>
+<?php require_once "../includes/navbarSiswa.php"; ?>
 
 <?php
 $stmt = $pdo->prepare("

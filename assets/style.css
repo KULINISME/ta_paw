@@ -36,6 +36,10 @@ a {
 .btn_a.hapus:hover {
   background-color: #ff6565;
 }
+.btn_a.besar {
+  padding: 12px 25px;
+  font-size: 20px;
+}
 /* header */
 .logo {
   font-size: 1.8rem;
