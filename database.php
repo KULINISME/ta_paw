@@ -147,31 +147,35 @@ function login($user,$pass){
     return $data;
 }
 // fungsi proses pendaftaran
-function proses_pendaftaran( array $data){
+function proses_pendaftaran( array $data,$file){
     global $pdo;
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $kk=$_FILES['kk'];
+        $kk=$file['kk'];
         $name_kk=$kk['name'];
+        $name_kk_new="siswa_".$data['id_akun']."_kk_";
         $tmp_kk=$kk['tmp_name'];
-        $tujuan_kk="../kk/".$name_kk;
+        $tujuan_kk="../kk/".$name_kk_new;
         move_uploaded_file($tmp_kk,$tujuan_kk);
         
-        $akta=$_FILES['akte'];
+        $akta=$file['akte'];
         $name_akta=$akta['name'];
+        $name_akta_new="siswa_".$data['id_akun']."_akta_";
         $tmp_akta=$akta['tmp_name'];
-        $tujuan_akta="../akta/".$name_akta;
+        $tujuan_akta="../akta/".$name_akta_new;
         move_uploaded_file($tmp_akta,$tujuan_akta);
         
-        $ijazah=$_FILES['ijazah'];
+        $ijazah=$file['ijazah'];
         $name_ijazah=$ijazah['name'];
+        $name_ijazah_new="siswa_".$data['id_akun']."_ijazah_";
         $tmp_ijazah=$ijazah['tmp_name'];
-        $tujuan_ijazah="../ijazah/".$name_ijazah;
+        $tujuan_ijazah="../ijazah/".$name_ijazah_new;
         move_uploaded_file($tmp_ijazah,$tujuan_ijazah);
         
-        $foto=$_FILES['foto'];
+        $foto=$file['foto'];
         $name_foto=$foto['name'];
+        $name_foto_new="siswa_".$data['id_akun']."_foto_";
         $tmp_foto=$foto['tmp_name'];
-        $tujuan_foto="../foto_pas/".$name_foto;
+        $tujuan_foto="../foto_pas/".$name_foto_new;
         move_uploaded_file($tmp_foto,$tujuan_foto);
         
         $stmnt=$pdo->prepare
@@ -199,13 +203,13 @@ function proses_pendaftaran( array $data){
             ':ALAMAT_AYAH'=>$_POST['alamat_ayah'],
             ':NO_HP_AYAH'=>$_POST['no_hp_ayah'],
             ':PEKERJAAN_AYAH'=>$_POST['pekerjaan_ayah'],
-            ':GAJI_AYAH'=>$_POST['gaji_ayah'],
+            ':GAJI_AYAH'=>$_POST['gaji_ayah'] === "" ? null : $_POST['gaji_ayah'],
             ':NAMA_IBU'=>$_POST['nama_ibu'],
             ':KEADAAN_IBU'=>$_POST['keadaan_ibu'],
             ':ALAMAT_IBU'=>$_POST['alamat_ibu'],
             ':NO_HP_IBU'=>$_POST['no_hp_ibu'],
             ':PEKERJAAN_IBU'=>$_POST['pekerjaan_ibu'],
-            ':GAJI_IBU'=>$_POST['gaji_ibu']
+            ':GAJI_IBU'=>$_POST['gaji_ibu'] === "" ? null : $_POST['gaji_ibu']
         ]);
         $lastIdPendaftar=lastInsertId();
         $stmnt2=$pdo->prepare
