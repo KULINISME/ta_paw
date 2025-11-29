@@ -152,30 +152,35 @@ function proses_pendaftaran( array $data,$file){
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         $kk=$file['kk'];
         $name_kk=$kk['name'];
-        $name_kk_new="siswa_".$data['id_akun']."_kk_";
+        $ext = pathinfo($name_kk, PATHINFO_EXTENSION);
+        $name_kk_new="siswa_".$data['id_akun']."_kk_.".$ext;
         $tmp_kk=$kk['tmp_name'];
         $tujuan_kk="../kk/".$name_kk_new;
         move_uploaded_file($tmp_kk,$tujuan_kk);
         
         $akta=$file['akte'];
         $name_akta=$akta['name'];
-        $name_akta_new="siswa_".$data['id_akun']."_akta_";
+        $ext = pathinfo($name_akta, PATHINFO_EXTENSION);
+        $name_akta_new="siswa_".$data['id_akun']."_akta_.".$ext;
         $tmp_akta=$akta['tmp_name'];
         $tujuan_akta="../akta/".$name_akta_new;
         move_uploaded_file($tmp_akta,$tujuan_akta);
         
         $ijazah=$file['ijazah'];
         $name_ijazah=$ijazah['name'];
-        $name_ijazah_new="siswa_".$data['id_akun']."_ijazah_";
+        $ext = pathinfo($name_ijazah, PATHINFO_EXTENSION);
+        $name_ijazah_new="siswa_".$data['id_akun']."_ijazah_.".$ext;
         $tmp_ijazah=$ijazah['tmp_name'];
         $tujuan_ijazah="../ijazah/".$name_ijazah_new;
         move_uploaded_file($tmp_ijazah,$tujuan_ijazah);
         
         $foto=$file['foto'];
         $name_foto=$foto['name'];
-        $name_foto_new="siswa_".$data['id_akun']."_foto_";
+        $ext = pathinfo($name_foto, PATHINFO_EXTENSION);
+        $name_foto_new="siswa_".$data['id_akun']."_foto_.".$ext;
         $tmp_foto=$foto['tmp_name'];
         $tujuan_foto="../foto_pas/".$name_foto_new;
+        $type = $foto['kk']['type'];
         move_uploaded_file($tmp_foto,$tujuan_foto);
         
         $stmnt=$pdo->prepare
