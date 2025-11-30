@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once 'cekLoginSiswa.php';
 if (!isset($_SESSION['isSiswa']) || $_SESSION['isSiswa'] != true) {
     require_once '../cekLogin.inc';
     exit();

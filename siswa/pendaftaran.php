@@ -1,5 +1,6 @@
-<?php session_start(); if(!isset($_SESSION['isSiswa']))
-{ require_once '../cekLogin.inc';; } require_once "../database.php";
+<?php 
+ require_once 'cekLoginSiswa.php';
+ require_once "../database.php";
 // require_once "../cekLogin.inc";
 require_once "../includes/header.php";
 require_once "../includes/navbarSiswa.php";

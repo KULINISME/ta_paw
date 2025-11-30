@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once 'cekLoginSiswa.php';
 
 // Pastikan yang login adalah siswa
 if (!isset($_SESSION['login']) || empty($_SESSION['isSiswa'])) {

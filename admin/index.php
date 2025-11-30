@@ -1,9 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['isAdmin'])){
-    require_once '../cekLogin.inc';
-    exit();
-}
+require_once 'cekLoginAdmin.php';
 require_once '../includes/header.php';
 require_once '../includes/navbarAdmin.php';
 require_once '../database.php';

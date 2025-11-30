@@ -1,4 +1,5 @@
 <?php
+require_once 'cekLoginAdmin.php';
 require_once '../database.php';
 require_once '../validasi.php';
 
