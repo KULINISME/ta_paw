@@ -1,12 +1,12 @@
-<!-- halaman untuk menampilkan siswa yang ditolak -->
 <?php
+
+require_once '../database.php';
 // Mengecek apakah admin sudah login
 require_once 'cekLoginAdmin.php';
 // header dan navbar admin
 require_once '../includes/header.php';
 require_once '../includes/navbarAdmin.php';
 // Koneksi ke databse
-require_once '../database.php';
 $daftar=gagal();
 ?>
 <div class="pendaftar">

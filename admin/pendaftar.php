@@ -1,4 +1,3 @@
-<!-- halaman untuk menampilkan pendaftar -->
 <?php
 // Mengecek apakah admin sudah login
 require_once 'cekLoginAdmin.php';

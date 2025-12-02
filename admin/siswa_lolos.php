@@ -1,4 +1,3 @@
-<!-- halaman untuk menampilkan siswa yang diterima -->
 <?php
 require_once 'cekLoginAdmin.php';
 require_once '../includes/header.php';

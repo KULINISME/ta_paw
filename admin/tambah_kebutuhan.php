@@ -1,4 +1,3 @@
-<!-- halaman untuk menambah kebutuhan baru -->
 <?php
     require_once 'cekLoginAdmin.php';
     require_once "../database.php";

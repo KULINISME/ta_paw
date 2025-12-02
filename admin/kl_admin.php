@@ -1,9 +1,6 @@
 <?php
     require_once 'cekLoginAdmin.php';
     require_once '../database.php';
-    require_once '../includes/header.php';
-    require_once '../includes/navbarAdmin.php';
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         if (isset($_POST['keluar'])){
             session_destroy();
@@ -14,6 +11,10 @@
             exit();
         }
     }
+    
+    require_once '../includes/header.php';
+
+    require_once '../includes/navbarAdmin.php';
 ?>
 <div class="kl_A">
     <div>
